@@ -1,0 +1,278 @@
+1. Write a C program to print Hello Students on the screen.
+
+Ans).
+
+#include <stdio.h>
+
+int main()
+ {
+    // Print the message to the screen
+    printf("Hello Students\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+2. Write a C Program to print Hello on the first line and Students in the second line.
+
+Ans).
+
+#include <stdio.h>
+
+int main() 
+ {
+    // Print "Hello" on the first line
+    printf("Hello\n");
+
+    // Print "Students" on the second line
+    printf("Students\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+3. Write a C program to print “MySirG” on the screen
+
+Ans).
+
+#include <stdio.h>
+
+int main()
+ {
+    // Print the message to the screen
+    printf("MySirG\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+4. Write a C program to print “Teacher’s Day” on the screen
+
+Ans).
+
+#include <stdio.h>
+
+int main()
+ {
+    // Print the message to the screen
+    printf("Teacher's Day\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+
+5. Write a C program to print \n on the screen
+
+Ans).
+
+#include <stdio.h>
+
+int main() 
+ {
+    // Print the backslash followed by the letter 'n'
+    printf("\\n\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+6. Write a C program to print %d on the screen
+
+Ans).
+
+#include <stdio.h>
+
+int main() 
+ {
+    // Print the characters "%d" on the screen
+    printf("%%d\n");
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+
+7. Write a C program containing declaration of three variables (of type int, char and
+float), also assign some values to them and print values of all three variables using
+single printf().
+
+Ans).
+
+#include <stdio.h>
+
+int main() 
+  {
+    // Declare variables
+    int integerVar = 42;
+    char charVar = 'A';
+    float floatVar = 3.14;
+
+    // Print values of all three variables using a single printf()
+    printf("Integer: %d, Character: %c, Float: %f\n", integerVar, charVar, floatVar);
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+8. Explore following format specifiers on internet - %i, %g, %lf
+
+Ans).
+
+Certainly! Here's an exploration of the format specifiers %i, %g, and %lf in C:
+
+%i: This format specifier is used for printing integers. It is interchangeable with %d. For example:
+
+#include <stdio.h>
+
+int main()
+ {
+    int number = 42;
+    printf("Integer: %i\n", number);
+    return 0;
+ }
+
+Output:
+---------
+Integer: 42
+
+
+2.%g :
+------
+#include <stdio.h>
+
+int main() 
+
+ {
+    double floatingPointNumber = 3.14;
+    printf("Floating Point: %g\n", floatingPointNumber);
+    return 0;
+ }
+
+
+3. %1f :
+---------
+
+#include <stdio.h>
+
+int main() 
+
+ {
+    double doubleNumber = 123.456;
+    printf("Double: %lf\n", doubleNumber);
+    return 0;
+ }
+
+
+
+9. Write a C program to print character stored in a char variable, also print its ASCII
+code.
+Ans).
+
+#include <stdio.h>
+
+int main() 
+ {
+    // Declare a char variable
+    char myChar = 'A';
+
+    // Print the character
+    printf("Character: %c\n", myChar);
+
+    // Print the ASCII code of the character
+    printf("ASCII Code: %d\n", myChar);
+
+    // Return 0 to indicate successful completion
+    return 0;
+ }
+
+
+10. How to convert a Decimal number into a Binary number and vice versa.
+Ans).
+
+Converting a decimal number to binary and vice versa involves different processes for each direction.
+
+Decimal to Binary:
+-----------------
+To convert a decimal number to binary, you can repeatedly divide the decimal number by 2 and keep track of the remainders. The binary equivalent is obtained by reading the remainders in reverse order.
+
+Here's a simple algorithm in C:
+
+#include <stdio.h>
+
+void decimalToBinary(int decimal)
+ {
+    int binary[32]; // Assuming 32-bit binary representation
+    int index = 0;
+
+    // Convert decimal to binary
+    while (decimal > 0) {
+        binary[index] = decimal % 2;
+        decimal = decimal / 2;
+        index++;
+    }
+
+    // Print binary representation in reverse order
+    printf("Binary: ");
+    for (int i = index - 1; i >= 0; i--) {
+        printf("%d", binary[i]);
+    }
+    printf("\n");
+ }
+
+  int main()
+ {
+    int decimalNumber = 42;
+    decimalToBinary(decimalNumber);
+
+    return 0;
+ }
+
+Binary to Decimal:
+------------------
+To convert a binary number to decimal, you can multiply each bit of the binary number by the corresponding power of 2 and sum the results.
+
+Here's a simple algorithm in C:
+
+
+#include <stdio.h>
+#include <math.h>
+
+int binaryToDecimal(long long binary)
+ {
+    int decimal = 0, remainder, i = 0;
+
+    // Convert binary to decimal
+    while (binary != 0) {
+        remainder = binary % 10;
+        decimal = decimal + remainder * pow(2, i);
+        i++;
+        binary = binary / 10;
+    }
+
+    return decimal;
+ }
+
+int main() {
+    long long binaryNumber = 101010; // Example binary number
+    int decimalResult = binaryToDecimal(binaryNumber);
+
+    printf("Decimal: %d\n", decimalResult);
+
+    return 0;
+ }
+These are basic examples, and you may need to adapt them based on your specific requirements or language features. Remember to handle edge cases and check for valid input values in a real-world scenario.
+
+
+
+
+
+
+ 
+
